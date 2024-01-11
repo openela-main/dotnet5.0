@@ -1,0 +1,28 @@
+--- a/patches/runtime/0036-Add-net46-for-some-packages-to-support-Omnisharp.patch
++++ b/patches/runtime/0036-Add-net46-for-some-packages-to-support-Omnisharp.patch
+@@ -58,25 +58,3 @@
+      <DefineConstants>$(DefineConstants);RESOURCES_EXTENSIONS</DefineConstants>
+      <Nullable>enable</Nullable>
+    </PropertyGroup>
+-diff --git a/src/libraries/System.Resources.Extensions/tests/System.Resources.Extensions.Tests.csproj b/src/libraries/System.Resources.Extensions/tests/System.Resources.Extensions.Tests.csproj
+-index b48848c7a45..b310496f4bc 100644
+---- a/src/libraries/System.Resources.Extensions/tests/System.Resources.Extensions.Tests.csproj
+-+++ b/src/libraries/System.Resources.Extensions/tests/System.Resources.Extensions.Tests.csproj
+-@@ -1,6 +1,6 @@
+- <Project Sdk="Microsoft.NET.Sdk">
+-   <PropertyGroup>
+--    <TargetFrameworks>$(NetCoreAppCurrent)-Windows_NT;$(NetCoreAppCurrent)-Unix;net461</TargetFrameworks>
+-+    <TargetFrameworks>$(NetCoreAppCurrent)-Windows_NT;$(NetCoreAppCurrent)-Unix;net461;net46</TargetFrameworks>
+-     <IncludeRemoteExecutor>true</IncludeRemoteExecutor>
+-   </PropertyGroup>
+-   <ItemGroup>
+-@@ -44,4 +44,4 @@
+-     </ItemGroup>
+-     <Exec Command="%(ExecuteMethod.Command)" WorkingDirectory="$(TargetDir)" />
+-   </Target>
+--</Project>
+-\ No newline at end of file
+-+</Project>
+--- 
+-2.18.0
+-
